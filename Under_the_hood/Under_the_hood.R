@@ -37,10 +37,10 @@ psmc.result<-function(file,i.iteration=25,mu=mu,s=100,g=g)
 #Data
 
 
-EulJugA <- dir("C:/Users/au601132/OneDrive - Aarhus universitet/Skrivebord/PhD/Kolibri_heliconia/PSMC/Auto/","psmc$", full.names=T) # main PSMC results
-HelBih <- dir("C:/Users/au601132/OneDrive - Aarhus universitet/Skrivebord/PhD/Kolibri_heliconia/PSMC/HBih/","psmc$", full.names=T) # main PSMC results
-HelCar <- dir("C:/Users/au601132/OneDrive - Aarhus universitet/Skrivebord/PhD/Kolibri_heliconia/PSMC/HCar/","psmc$", full.names=T) # main PSMC results
-EulHol <- dir("C:/Users/au601132/OneDrive - Aarhus universitet/Skrivebord/PhD/Kolibri_heliconia/PSMC/Ehol/","psmc$", full.names=T) # main PSMC results
+EulJugA <- dir("C://","psmc$", full.names=T) # main PSMC results
+HelBih <- dir("C://","psmc$", full.names=T) # main PSMC results
+HelCar <- dir("C://","psmc$", full.names=T) # main PSMC results
+EulHol <- dir("C://","psmc$", full.names=T) # main PSMC results
 
 
 # Run the Function for a selected set of parameters: 
@@ -289,5 +289,6 @@ for(method in c("pearson", "spearman", "kendall")) {
     ))
   }
 } # end method loop
+
 
 
