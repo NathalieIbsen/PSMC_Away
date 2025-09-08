@@ -229,8 +229,7 @@ To visualize the PSMC trajectories over the full parameter space as a matrix-sty
 
 #### Overlay_plots.R
 
-You can also visualize the *^matrix styled plot* with the heatmap p-values as the background color of each plot. This can be done through the script:   
-**Overlay_plots.R**
+You can also visualize the *^matrix styled plot* with the heatmap p-values as the background color of each plot. This can be done through the script: **Overlay_plots.R**
 
 [See images] ??!!
 
