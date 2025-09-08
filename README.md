@@ -217,17 +217,15 @@ An example run of the three functions are found in :
 
 Alongside the PSMC outputs from the paper:  IN PUT PAPER ! :D
 
-### Additional visulation 
+### Additional visualization 
 
 #### Add_plots.R
 
-The code can be found in:
+The code found in **Add_plots.R** can bes used to: 
 
-**Add_plots.R**
+To visualize the Raw PSMC trajectories, use the section: **General figure creation. ****
 
-If you want to visualize the Raw PSMC trajectories use the section: **General figure creation.**
-
-If you wish to visualize the PSMC trajectories over the full parameter space as matrix-styled plot (rows=list_mu2, coll=list_g2), this can be done through the section: **MATRIX styled plots**
+To visualize the PSMC trajectories over the full parameter space as matrix-styled plot (rows=list_mu2, coll=list_g2), this can be done through the section: **MATRIX styled plots**
 
 
 #### Overlay_plots.R
