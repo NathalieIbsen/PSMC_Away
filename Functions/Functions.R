@@ -48,9 +48,6 @@ psmc.result<-function(file,i.iteration=25,mu=mu,s=100,g=g)
 
 
 #####Running PSMC, 
-####Cutting to covered time period ? maybe not needed ?? 
-#> OBS Jesper
-
 
 #Running a Bin corr test.
 
@@ -234,4 +231,5 @@ plot_heatmap <- function(df, method_choice, species_name) {
       y = "Generation time (years)"
     )
 }
+
 
