@@ -11,7 +11,7 @@
   - [How to run the functions](#how-to-run-the-functions)
     - [Analysis](#analysis)
     - [Run.R](#runr)
-    - [Additional visualization](# additional-visualization)
+    - [Additional visualization](#additional-visualization)
       - [Add\_plots.R](#add_plotsr)
       - [Overlay\_plots.R](#overlay_plotsr)
   - [Under the hood of BinCorr\_psmc (function)](#under-the-hood-of-bincorr_psmc-function)
