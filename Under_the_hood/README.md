@@ -1,0 +1,1 @@
+This is a (mostly) oneliner R script that picks apart the BinCorr_psmc and plots the intermediate data to visualize the transformation from raw PSMC output to a testable common time grid binned dataset.
