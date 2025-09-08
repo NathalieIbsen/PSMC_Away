@@ -10,6 +10,7 @@
     - [Functions.R](#functionsr)
   - [How to run the functions](#how-to-run-the-functions)
     - [Analysis](#analysis)
+    - [Run.R](#runr)
     - [Addtional visulation](#addtional-visulation)
   - [Under the hood of BinCorr\_psmc (function)](#under-the-hood-of-bincorr_psmc-function)
 
@@ -208,9 +209,9 @@ plot1 <- plot_heatmap(df, method_choice, species_name)
 
 ### Analysis  
 
-An example run of the three functions can be found in : 
+An example run of the three functions are found in : 
 
-**Run.R**
+### Run.R
 
 Alongside the PSMC outputs from the paper:  IN PUT PAPER ! :D
 
