@@ -5,3 +5,6 @@ The needed R Libraries are: lmtest, imputeTS, dplyr, tseries, BINCOR, ggplot2, d
 And will loaded by each function when needed.   
 
 **Functions.R** contain three functions that can be loaded by running the full script.
+
+
++ Download example_data.zip 
