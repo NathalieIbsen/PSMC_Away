@@ -201,7 +201,7 @@ Result <- BinCorr_psmc(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2)
 **plot_heatmap**
 
 ```R
-plot1 <- plot_heatmap(df, method_choice, species_name)
+plot1 <- plot_heatmap(df, "method_choice", "species_name")
 
 #Where:
 #df = The resulting dataframe from the BinCorr_psmc function 
