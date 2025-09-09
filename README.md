@@ -80,8 +80,8 @@ This can be plotted as the full PSMC.
 **BinCorr_psmc**   
 `BinCorr_psmc <- function(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2)`  #please see the [How to run the functions]  section for further information on implementation. 
 
-This function automates parameter exploration and computes all Spearman correlations (rank-based monotonic) between two species’ Ne trajectories over the parameter space. Pearson (linear) or Kendall (rank-based concordance), can easily be computed as well.  
-This function utilizes **psmc.result** and standardizes trajectories by discarding the first 12 time points, as PSMC is less reliable in recent times and large fluctuations are often attributed to technical issues. Further, the analysis is restricted to the overlapping temporal range shared between the two species, given the parameter space.
+This function automates parameter exploration and computes all Spearman correlations (rank-based monotonic), Pearson (linear) and Kendall (rank-based concordance) between two species’ Ne trajectories over the input parameter space.   
+The function utilizes **psmc.result** and standardizes trajectories by discarding the first 12 time points, as PSMC is less reliable in recent times and large fluctuations are often attributed to technical issues. Further, the analysis is restricted to the overlapping temporal range shared between the two species, given the parameter space.
 
 A weighted interpolation method that respects the original PSMC binning structure is applied. For each species, the Ne value assigned to a common time point is determined by the PSMC bin in which it fell, weighted by the bin width. Where bins intersect, Ne values are averaged or linearly interpolated between flanking bins. This ensures that differences in binning resolution do not bias comparisons, while retaining the biological meaning of PSMC estimates as averages across coalescent intervals. The number of interpolations is set to the smaller of the two datasets, ensuring that the species with fewer points dictates the resolution. 
 
@@ -126,7 +126,7 @@ N_common = the number of interpolations (the number of "overlapping" bins dictat
 **By default, all correlations are calculated!**   
 All three ("spearman", "pearson", "kendall") are run simultaneously, and there will be three rows pr comparison in the output file.  
 
-**However:** If the parameter space you wish to explore is very wide (e.g, above 50mu*50g), processing may be slowed. If this is the case, one can tweak the BinCorr_psmc function to only estimate one of the correlations.
+**However:** If the parameter space you wish to explore is very wide (e.g, above 50mu*50g), processing may be slowed. If this is the case, you can tweak the BinCorr_psmc function to only estimate one of the correlations.
 
 - This can easily be changed in the function.R by exchanging this line:   
 
