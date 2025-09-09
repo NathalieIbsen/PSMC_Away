@@ -50,7 +50,8 @@ And are loaded by each function when needed.
 
 
 ## Functions
-### [Functions.R] (./Functions.R/) 
+
+#### [Functions.R] (./Functions.R/) 
 
 **Functions.R** contain three functions that can be loaded by running the full script. 
 
@@ -212,7 +213,7 @@ plot1 <- plot_heatmap(df, "method_choice", "species_name")
 
 An example run of the three functions are found in : 
 
-### [Run.R] (./Analysis/)
+#### [Run.R] (./Analysis/)
 
 Alongside the PSMC outputs from the paper:  IN PUT PAPER ! :D
 
