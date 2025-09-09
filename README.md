@@ -230,7 +230,7 @@ Alongside the PSMC outputs from the paper:  IN PUT PAPER ! :D
 
 ### Additional visualization 
 
-#### [Add_plots.R](./Additional visualization/)
+#### [Add_plots.R](./Additional_visualization/)
 
 The code found in **Add_plots.R** can bes used to: 
 
@@ -239,7 +239,7 @@ To visualize the Raw PSMC trajectories, use the section: **General figure creati
 To visualize the PSMC trajectories over the full parameter space as a matrix-styled plot (rows=list_mu2, coll=list_g2), this can be done through the section: **MATRIX styled plots**
 
 
-#### [Overlay_plots.R](./Additional visualization/)
+#### [Overlay_plots.R](./Additional_visualization/)
 
 You can also visualize the *^matrix styled plot* with the heatmap p-values as the background color of each plot. This can be done through the script: **Overlay_plots.R**
 
