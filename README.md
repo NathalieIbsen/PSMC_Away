@@ -50,7 +50,7 @@ And are loaded by each function when needed.
 
 
 ## Functions
-### Functions.R 
+### [Functions.R] (./Functions.R/) 
 
 **Functions.R** contain three functions that can be loaded by running the full script. 
 
@@ -70,7 +70,7 @@ N0<-theta0/4/mu/s
 a<-t(as.data.frame(strsplit(RS,"\t")))
 Time<-2*N0*as.numeric(a[,3])*g
 Ne<-N0*as.numeric(a[,4])
-  ```
+```
 The output of psmc.result is a data frame with two columns: Time (years before present) and Ne, in the expected stepwise bin structure of a PSMC.
 This can be plotted as the full PSMC. 
 
@@ -127,7 +127,7 @@ N_common = the number of interpolations (the number of "overlapping" bins dictat
 
 ```R
       # Loop over correlation methods
-      for(method in c("spearman")) { ## ONE can add "pearson" or "kendall" (if that is believed to be a better fit)  or all three c("spearman", "pearson", "kendall"), they can all be run simultaneously
+      for(method in c("spearman")) { ## ONE can add "pearson" or "kendall" (if that is believed to be a better fit)  or all three c("spearman", "pearson", "kendall"), they can       all be run simultaneously
         # Compute binned correlation with BINCOR
 ```
 
@@ -185,35 +185,34 @@ psmc.result <- (file, i.iteration = 25,  mu=mu, s=100, g=g)
 
 ```R
 Result <- BinCorr_psmc(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2)
-
-#Where: 
-
-#PSMC_1 = The PSMC output file of species 1, where the parameters are set. "chr"
-#mu1 = The set mutation rate for species 1. "num"
-#g1 = The set generation time(years) for species 1. "num"
-#PSMC_2 = The P output file of species 2, where the parameters may vary. "chr"
-#list_mu2 = A list mutation rates for species 2. "c(,)" / "c(num)"
-#list_g2 =  A list mutation rates for species 2. "c(,)" / "c(num)"
-
-#If no output name is assigned through "chr" <-  BinCorr_psmc(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2)
-#the output will be called: All_Results
 ```
+Where: 
+**PSMC_1** = The PSMC output file of species 1, where the parameters are set. "chr"
+**mu1** = The set mutation rate for species 1. "num"
+**g1** = The set generation time(years) for species 1. "num"
+**PSMC_2** = The P output file of species 2, where the parameters may vary. "chr"
+**list_mu2** = A list mutation rates for species 2. "c(,)" / "c(num)"
+**list_g2** =  A list mutation rates for species 2. "c(,)" / "c(num)"
+
+If no output name is assigned through "chr" <-  BinCorr_psmc(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2)
+-> the output will be called: All_Results
+
 
 **plot_heatmap**
 
 ```R
 plot1 <- plot_heatmap(df, "method_choice", "species_name")
+```
 
 #Where:
-#df = The resulting dataframe from the BinCorr_psmc function 
-#
-```
+**df** = The resulting dataframe from the BinCorr_psmc function 
+
 
 ### Analysis  
 
 An example run of the three functions are found in : 
 
-### Run.R
+### [Run.R] (./Analysis/)
 
 Alongside the PSMC outputs from the paper:  IN PUT PAPER ! :D
 
