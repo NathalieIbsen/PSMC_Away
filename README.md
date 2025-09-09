@@ -10,7 +10,7 @@
     - [Functions.R](#functionsr)
   - [How to run the functions](#how-to-run-the-functions)
     - [Analysis](#analysis)
-    - [Run.R](#runr)
+      - [Run.R](#runr)
     - [Additional visualization](#additional-visualization)
       - [Add\_plots.R](#add_plotsr)
       - [Overlay\_plots.R](#overlay_plotsr)
