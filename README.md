@@ -84,8 +84,8 @@ This function automates parameter exploration and computes all Spearman correlat
 This function utilizes **psmc.result** and standardizes trajectories by discarding the first 12 time points, as PSMC is less reliable in recent times and large fluctuations are often attributed to technical issues. Further, the analysis is restricted to the overlapping temporal range shared between the two species, given the parameter space.
 
 A weighted interpolation method that respects the original PSMC binning structure is applied. For each species, the Ne value assigned to a common time point is determined by the PSMC bin in which it fell, weighted by the bin width. Where bins intersect, Ne values are averaged or linearly interpolated between flanking bins. This ensures that differences in binning resolution do not bias comparisons, while retaining the biological meaning of PSMC estimates as averages across coalescent intervals. The number of interpolations is set to the smaller of the two datasets, ensuring that the species with fewer points dictates the resolution. 
-```R
 
+```R
 weighted_interp <- function(psmc_df, common_time) {
   sapply(common_time, function(t) {
     bin_idx <- which(psmc_df$Time - psmc_df$twidth/2 <= t & t <= psmc_df$Time + psmc_df$twidth/2)
@@ -128,18 +128,18 @@ All three ("spearman", "pearson", "kendall") are run simultaneously, and there w
 
 **However:** If the parameter-space you wish to explore is very wide, one can tweak the BinCorr_psmc function to only estimate one of the correlations
 
-This can easily be changed in the function.R by exchanging this line:   
+- This can easily be changed in the function.R by exchanging this line:   
 
 ```R
-      # Loop over correlation methods
-      for(method in c("spearman", "pearson", "kendall")){
+# Loop over correlation methods
+for(method in c("spearman", "pearson", "kendall")){
 ```
 
 **To:**
 
 ```R
-      # Loop over correlation methods
-      for(method in c("spearman")){
+# Loop over correlation methods
+for(method in c("spearman")){
 ```
 **OR** "pearson" or "kendall" (if that is believed to be a better fit). 
 
@@ -150,7 +150,7 @@ This can easily be changed in the function.R by exchanging this line:
 The correlation results can be visualized as heatmaps with this function (using ggplot2).   
 P-values < 1 × 10⁻⁵ with positive correlation coefficients are displayed as a gradient (white to blue). Negative correlations are colored in grey, while non-significant positive correlations are shaded solid white (visually close to P-values < 1 × 10⁻⁵).
 
-This can be changed directly in the function. 
+- This can be changed directly in the function. 
 ```R
       color_group = case_when(
         Correlation < 0 ~ "neg_corr",
@@ -230,7 +230,7 @@ Alongside the PSMC outputs from the paper:  IN PUT PAPER ! :D
 
 ### Additional visualization 
 
-#### Add_plots.R
+#### [Add_plots.R](./Additional visualization/)
 
 The code found in **Add_plots.R** can bes used to: 
 
@@ -239,7 +239,7 @@ To visualize the Raw PSMC trajectories, use the section: **General figure creati
 To visualize the PSMC trajectories over the full parameter space as a matrix-styled plot (rows=list_mu2, coll=list_g2), this can be done through the section: **MATRIX styled plots**
 
 
-#### Overlay_plots.R
+#### [Overlay_plots.R](./Additional visualization/)
 
 You can also visualize the *^matrix styled plot* with the heatmap p-values as the background color of each plot. This can be done through the script: **Overlay_plots.R**
 
