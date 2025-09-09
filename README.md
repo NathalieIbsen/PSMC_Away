@@ -60,7 +60,7 @@ And are loaded by each function when needed.
 `psmc.result <- function(file, i.iteration = 25,  mu=mu, s=100, g=g)` 
 
 By default, it is set to the ith iteration of 25 (i.iteration=25) and bin size of 100 (s=100).
-If a PSMC is run differently, this should of course be changed !!   
+**If a PSMC is run differently, this should of course be changed !!**   
 The function parses PSMC outputs by identifying recombination (RS) and theta (TR) entries, computing a scaling constant θ.
 θ0 (theta0) is the first scaled mutation parameter. 
 
