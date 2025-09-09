@@ -30,7 +30,8 @@ This method was developed for: ###INSERT THE PAPER HERE NAT !! ####
 ## Prerequisites
 
 ### PSMC 
-Each PSMC output (Li & Durbin, 2011) should be placed in it's own separate folder, whether the analysis is run locally or on a cluster. e.g The example_data
+Each PSMC output (Li & Durbin, 2011) should be placed in it's own separate folder, whether the analysis is run locally or on a cluster. e.g 
+The example_data is
 
 ### R Libraries
 The needed R Libraries are:   
@@ -122,15 +123,26 @@ P_value = the P value
 CI_Lower & CI_upper = confidence intervals (num if Pearson, if Spearman or Kendall = NA)  
 N_common = the number of interpolations (the number of "overlapping" bins dictated by the dataset with fewer bins).
 
-**The default correlation method is spearman!**   
+**The default All correlations are calculated!**   
+All three ("spearman", "pearson", "kendall") are run simultaneously, and there will be three rows pr. Comparison in the output file.  
 
-**However:** BinCorr allows for  pearson or kendall as well. These can be added easily in the function - if these are believed to be a better fit for your system. All three ("spearman", "pearson", "kendall") can be run simultaneously. The result will be three rows pr. Comparison.  
+**However:** If the parameter-space you wish to explore is very wide, one can tweak the BinCorr_psmc function to only estimate one of the correlations
+
+This can easily be changed in the function.R by exchanging this line:   
 
 ```R
       # Loop over correlation methods
-      for(method in c("spearman")) { ## ONE can add "pearson" or "kendall" (if that is believed to be a better fit)  or all three c("spearman", "pearson", "kendall"), they can       all be run simultaneously
-        # Compute binned correlation with BINCOR
+      for(method in c("spearman", "pearson", "kendall")){
 ```
+
+**To:**
+
+```R
+      # Loop over correlation methods
+      for(method in c("spearman")){
+```
+**OR** "pearson" or "kendall" (if that is believed to be a better fit). 
+
 
 **plot_heatmap**   
 `plot_heatmap <- function(df, method_choice, species_name)`  #please see the [How to run the functions]  section for further information on implementation.
@@ -175,12 +187,12 @@ The functions are run by:
 **psmc.result**  (Modified from a script by Shenglin Liu, Mar 25, 2019.)   
 ```R
 psmc.result <- (file, i.iteration = 25,  mu=mu, s=100, g=g)
-#Where: 
-
-#file = The PSMC output file of a species. "chr"
-#mu = The mutation rate. "num"
-#g = The generation time(years). "num"
 ```
+Where: 
+
+**file** = The PSMC output file of a species. "chr"
+**mu** = The mutation rate. "num"
+**g** = The generation time(years). "num"
 
 **BinCorr_psmc** 
 
@@ -204,10 +216,9 @@ If no output name is assigned through "chr" <-  BinCorr_psmc(PSMC_1, PSMC_2, mu1
 ```R
 plot1 <- plot_heatmap(df, "method_choice", "species_name")
 ```
-
 #Where:
 **df** = The resulting dataframe from the BinCorr_psmc function 
-
+***method_choice**  = The correlation method you would like plotted, "spearman", "pearson", or "kendall"
 
 ### Analysis  
 
