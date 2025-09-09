@@ -204,7 +204,7 @@ Where:
 **g1** = The set generation time(years) for species 1. "num"
 **PSMC_2** = The P output file of species 2, where the parameters may vary. "chr"
 **list_mu2** = A list mutation rates for species 2. "c(,)" / "c(num)"
-**list_g2** =  A list mutation rates for species 2. "c(,)" / "c(num)"
+**list_g2** =  A list mutation rates for specieThe s 2. "c(,)" / "c(num)"
 
 If no output name is assigned through "chr" <-  BinCorr_psmc(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2)
 -> the output will be called: All_Results
@@ -216,8 +216,9 @@ If no output name is assigned through "chr" <-  BinCorr_psmc(PSMC_1, PSMC_2, mu1
 plot1 <- plot_heatmap(df, "method_choice", "species_name")
 ```
 #Where:
-**df** = The resulting dataframe from the BinCorr_psmc function 
-***method_choice**  = The correlation method you would like plotted, "spearman", "pearson", or "kendall"
+**df** = The resulting dataframe from the BinCorr_psmc function   
+**method_choice**  = The correlation method you would like plotted, "spearman", "pearson", or "kendall"   
+**species_name** = A name that will be input in the title of the heatmap   
 
 ### Analysis  
 
