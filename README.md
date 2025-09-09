@@ -44,7 +44,7 @@ The needed R Libraries are:
   dplyr   
 
 These can be acquired through running: 
-#### Prerequisites.R
+#### [Prerequisites.R](./Prerequisites/)
 And are loaded by each function when needed. 
 
 
@@ -63,12 +63,12 @@ The function parses PSMC outputs by identifying recombination (RS) and theta (TR
 
 
 ```R
-        theta0<-as.numeric(strsplit(TR,"\t")[[1]][2])
-        N0<-theta0/4/mu/s
+theta0<-as.numeric(strsplit(TR,"\t")[[1]][2])
+N0<-theta0/4/mu/s
         
-        a<-t(as.data.frame(strsplit(RS,"\t")))
-        Time<-2*N0*as.numeric(a[,3])*g
-        Ne<-N0*as.numeric(a[,4])
+a<-t(as.data.frame(strsplit(RS,"\t")))
+Time<-2*N0*as.numeric(a[,3])*g
+Ne<-N0*as.numeric(a[,4])
   ```
 The output of psmc.result is a data frame with two columns: Time (years before present) and Ne, in the expected stepwise bin structure of a PSMC.
 This can be plotted as the full PSMC. 
@@ -83,18 +83,18 @@ This function utilizes **psmc.result** and standardizes trajectories by discardi
 A weighted interpolation method that respects the original PSMC binning structure is applied. For each species, the Ne value assigned to a common time point is determined by the PSMC bin in which it fell, weighted by the bin width. Where bins intersect, Ne values are averaged or linearly interpolated between flanking bins. This ensures that differences in binning resolution do not bias comparisons, while retaining the biological meaning of PSMC estimates as averages across coalescent intervals. The number of interpolations is set to the smaller of the two datasets, ensuring that the species with fewer points dictates the resolution. 
 ```R
 
-      weighted_interp <- function(psmc_df, common_time) {
-        sapply(common_time, function(t) {
-          bin_idx <- which(psmc_df$Time - psmc_df$twidth/2 <= t & t <= psmc_df$Time + psmc_df$twidth/2)
-          if(length(bin_idx) == 1) {
-            return(psmc_df$Ne[bin_idx])
-          } else if(length(bin_idx) > 1) {
-            return(mean(psmc_df$Ne[bin_idx]))
-          } else {
-            return(approx(psmc_df$Time, psmc_df$Ne, xout = t)$y)
-          }
-        })
+weighted_interp <- function(psmc_df, common_time) {
+  sapply(common_time, function(t) {
+    bin_idx <- which(psmc_df$Time - psmc_df$twidth/2 <= t & t <= psmc_df$Time + psmc_df$twidth/2)
+    if(length(bin_idx) == 1) {
+    return(psmc_df$Ne[bin_idx])
+      } else if(length(bin_idx) > 1) {
+        return(mean(psmc_df$Ne[bin_idx]))
+      } else {
+      return(approx(psmc_df$Time, psmc_df$Ne, xout = t)$y)
       }
+    })
+}
 ```
 
 The correlation is then tested on this interpolated time series data. Please see the "Under the hood of BinCorr_psmc" section for further details, *a step-by-step manual* (coming soon :D), and a (mostly) oneliner R script detailing and plotting the data transformations. 
