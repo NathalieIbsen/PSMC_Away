@@ -51,7 +51,7 @@ And are loaded by each function when needed.
 
 ## Functions
 
-#### [Functions.R](./Functions.R/) 
+#### [Functions.R](./Functions/) 
 
 **Functions.R** contain three functions that can be loaded by running the full script. 
 
