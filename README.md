@@ -40,9 +40,9 @@ The needed R Libraries are:
   tseries   
   BINCOR   
   ggplot2   
-  dplyr
-  flextable
-  webshot2
+  dplyr   
+  flextable   
+  webshot2   
 
 These can be acquired through running: 
 #### [Prerequisites.R](./Prerequisites/)
