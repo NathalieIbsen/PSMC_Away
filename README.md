@@ -123,10 +123,10 @@ P_value = the P value
 CI_Lower & CI_upper = confidence intervals (num if Pearson, if Spearman or Kendall = NA)  
 N_common = the number of interpolations (the number of "overlapping" bins dictated by the dataset with fewer bins).
 
-**The default All correlations are calculated!**   
-All three ("spearman", "pearson", "kendall") are run simultaneously, and there will be three rows pr. Comparison in the output file.  
+**By default, all correlations are calculated!**   
+All three ("spearman", "pearson", "kendall") are run simultaneously, and there will be three rows pr comparison in the output file.  
 
-**However:** If the parameter-space you wish to explore is very wide, one can tweak the BinCorr_psmc function to only estimate one of the correlations
+**However:** If the parameter space you wish to explore is very wide (e.g, above 50mu*50g), processing may be slowed. If this is the case, one can tweak the BinCorr_psmc function to only estimate one of the correlations.
 
 - This can easily be changed in the function.R by exchanging this line:   
 
@@ -134,15 +134,14 @@ All three ("spearman", "pearson", "kendall") are run simultaneously, and there w
 # Loop over correlation methods
 for(method in c("spearman", "pearson", "kendall")){
 ```
-
 **To:**
-
 ```R
 # Loop over correlation methods
 for(method in c("spearman")){
 ```
 **OR** "pearson" or "kendall" (if that is believed to be a better fit). 
 
+And re-running the Functions.R script. 
 
 **plot_heatmap**   
 `plot_heatmap <- function(df, method_choice, species_name)`  #please see the [How to run the functions]  section for further information on implementation.
