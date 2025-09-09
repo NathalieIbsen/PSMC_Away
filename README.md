@@ -23,7 +23,6 @@ PSMC_Away is a suite of  R functions for processing Pairwise Sequentially Markov
 
 This method was developed for: ###INSERT THE PAPER HERE NAT !! #### 
 
-
     REF 1: Li, H., Durbin, R. Inference of human population history from individual whole-genome sequences. Nature 475, 493–496 (2011). https://doi.org/10.1038/nature10231
 
     REF 2: O'Connell D, Kaiser-Bunbury C, Aizpurua O, Bechsgaard J, Borregaard M, Alberdi A, Galetti M, Gilbert MT, Gonçalves F, Heinen J, Jønsson K, Ramos-Madrigal J, Moyle L, Pedersen M, Schroeder H, Simmons B, Temeles EJ, Thomsen P, de Vere N, Morales H, Vollstädt M, Bilde T and Dalsgaard B (preprint). Islands as laboratories of mutualistic interactions: integrating molecular approaches to advance to an eco-evolutionary understanding of mutualism. Authorea.
@@ -31,7 +30,7 @@ This method was developed for: ###INSERT THE PAPER HERE NAT !! ####
 ## Prerequisites
 
 ### PSMC 
-Each PSMC output (Li & Durbin, 2011) should be placed in it's own folder, whether the analysis is run locally or on a cluster.
+Each PSMC output (Li & Durbin, 2011) should be placed in it's own separate folder, whether the analysis is run locally or on a cluster. e.g The example_data
 
 ### R Libraries
 The needed R Libraries are:   
