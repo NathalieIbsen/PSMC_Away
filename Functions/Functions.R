@@ -131,9 +131,7 @@ BinCorr_psmc <- function(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2) {
       bints2 <- data.frame(Time = common_time, Ne = interp2)
       
       # Loop over correlation methods
-      for(method in c("spearman")) { ## ONE can add "pearson" or "kendall" (if that is believed to be a better fit)  or all three ("spearman", "pearson", "kendall"), they can all be run simultaneously
-        # Compute binned correlation with BINCOR
-        cor_ts(
+      for(method in c("spearman", "pearson", "kendall")){ ## ONE can remove methods here for faster computation 
           bints1, bints2,
           varnamets1 = "PSMC1",
           varnamets2 = "PSMC2",
@@ -144,7 +142,6 @@ BinCorr_psmc <- function(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2) {
           Hpdf = 8, Wpdf = 10,
           resfig = 300,
           ofilename = paste0("cor_psmc1_psmc2_", method, "_mu", mu2, "_g", g2)
-        )
         
         # Safe correlation test
         cor_test <- tryCatch(
@@ -231,5 +228,6 @@ plot_heatmap <- function(df, method_choice, species_name) {
       y = "Generation time (years)"
     )
 }
+
 
 
