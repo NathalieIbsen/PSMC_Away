@@ -8,7 +8,8 @@ setwd("C:....")
 
 #______________INPUTS______________
 
-#Data
+#Data folder = the folder containing the subfolders of data. 
+#e.g example data 
 datafolder <- "C://"
 
 # Main PSMC results
@@ -18,8 +19,7 @@ HelCar  <- dir(paste0(datafolder, "HCar/"), pattern = "psmc$", full.names = TRUE
 EulHol  <- dir(paste0(datafolder, "Ehol/"), pattern = "psmc$", full.names = TRUE)
 
 
-##Define parameter space of PCMS1
-
+##Define the parameter space of PCMS1
 
 #MUTATION RATE 
 mu1 <- 2.8e-9
@@ -28,7 +28,7 @@ mu1 <- 2.8e-9
 g1 <- 2.5
 
 
-##Define parameter space of PCMS2
+##Define the parameter space of PCMS2
 
 #MUTATION RATE 
 #a linear sequence within this range
@@ -99,6 +99,7 @@ ft <- autofit(ft)
 
 # Save as PNG in WD 
 save_as_image(ft, path = "Top10_e-8_CorrelationsEulJugA_HelBih.png")
+
 
 
 
