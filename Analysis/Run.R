@@ -9,7 +9,7 @@ setwd("C:....")
 #______________INPUTS______________
 
 #Data
-datafolder <- "C:/Users/au601132/OneDrive - Aarhus universitet/Skrivebord/PhD/Kolibri_heliconia/PSMC/"
+datafolder <- "C://"
 
 # Main PSMC results
 EulJugA <- dir(paste0(datafolder, "Auto/"), pattern = "psmc$", full.names = TRUE)
@@ -99,6 +99,7 @@ ft <- autofit(ft)
 
 # Save as PNG in WD 
 save_as_image(ft, path = "Top10_e-8_CorrelationsEulJugA_HelBih.png")
+
 
 
 
