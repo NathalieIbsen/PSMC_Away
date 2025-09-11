@@ -30,8 +30,8 @@ This method was developed for: ###INSERT THE PAPER HERE NAT !! ####
 ## Prerequisites
 
 ### PSMC 
-Each PSMC output (Li & Durbin, 2011) should be placed in it's own separate folder, whether the analysis is run locally or on a cluster. e.g 
-The example_data is
+Each PSMC output (Li & Durbin, 2011) should be placed in it's own separate folder, whether the analysis is run locally or on a cluster.   
+e.g The example_data contains subfolders - named as species abbreviations (it could be population names ect.). In these subfolders, a single PSMC output is stored. Alternatively, the full path of each file can be used in place of the above file structure.  #please see the [How to run the functions]  section for further information
 
 ### R Libraries
 The needed R Libraries are:   
