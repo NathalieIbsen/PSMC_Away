@@ -199,12 +199,12 @@ Where:
 Result <- BinCorr_psmc(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2)
 ```
 Where: 
-**PSMC_1** = The PSMC output file of species 1, where the parameters are set. "chr"
-**mu1** = The set mutation rate for species 1. "num"
-**g1** = The set generation time(years) for species 1. "num"
-**PSMC_2** = The P output file of species 2, where the parameters may vary. "chr"
-**list_mu2** = A list mutation rates for species 2. "c(,)" / "c(num)"
-**list_g2** =  A list mutation rates for specieThe s 2. "c(,)" / "c(num)"
+**PSMC_1** = The PSMC output file of species 1, where the parameters are set. "chr"   
+**mu1** = The set mutation rate for species 1. "num"   
+**g1** = The set generation time(years) for species 1. "num"   
+**PSMC_2** = The P output file of species 2, where the parameters may vary. "chr"   
+**list_mu2** = A list mutation rates for species 2. "c(,)" / "c(num)"   
+**list_g2** =  A list mutation rates for specieThe s 2. "c(,)" / "c(num)"   
 
 If no output name is assigned through "chr" <-  BinCorr_psmc(PSMC_1, PSMC_2, mu1, g1, list_mu2, list_g2)
 -> the output will be called: All_Results
