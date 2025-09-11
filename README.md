@@ -105,7 +105,7 @@ The correlation is then tested on this interpolated time series data. Please see
 The output of this function is a data.frame: 
 ```R
 > head(Result)
-     mu g   Method Correlation      P_value CI_lower CI_upper N_common
+     mu2 g2   Method Correlation      P_value CI_lower CI_upper N_common
 rho     1e-09       3 spearman   0.4873026 3.466721e-03       NA       NA       34
 rho1    1e-09       9 spearman  -0.4427063 3.438973e-02       NA       NA       23
 rho2    1e-09      15 spearman  -0.9137129 1.175458e-07       NA       NA       18
@@ -115,18 +115,18 @@ rho5    5e-09      15 spearman   0.4873026 3.466721e-03       NA       NA       
 ```
 Where: 
 
-mu = the tested mutation rate  
-g = the tested generation time   
-Method = correlation method used   
-Correlation = the correlation coefficient   
-P_value = the P value   
-CI_Lower & CI_upper = confidence intervals (num if Pearson, if Spearman or Kendall = NA)  
-N_common = the number of interpolations (the number of "overlapping" bins dictated by the dataset with fewer bins).
+**mu2** = the tested mutation rate  
+**g2** = the tested generation time   
+**Method** = correlation method used   
+**Correlation** = the correlation coefficient   
+**P_value** = the P value   
+**CI_Lower & CI_upper** = confidence intervals (num if Pearson, if Spearman or Kendall = NA)  
+**N_common** = the number of interpolations (the number of "overlapping" bins dictated by the dataset with fewer bins).
 
 **By default, all correlations are calculated!**   
 All three ("spearman", "pearson", "kendall") are run simultaneously, and there will be three rows pr comparison in the output file.  
 
-**However:** If the parameter space you wish to explore is very wide (e.g, above 50mu*50g), processing may be slowed. If this is the case, you can tweak the BinCorr_psmc function to only estimate one of the correlations.
+**However:** If the parameter space you wish to explore is very wide (e.g, above 40mu*40g), processing may be slowed (potentially upwards of a few hours). If this is the case, you can tweak the BinCorr_psmc function to only estimate one of the correlations.
 
 - This can easily be changed in the function.R by exchanging this line:   
 
