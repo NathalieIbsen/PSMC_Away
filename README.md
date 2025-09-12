@@ -36,7 +36,7 @@ e.g The example_data contains subfolders - named as species abbreviations (it co
 ### R Libraries
 The needed R Libraries are:   
 
-  lmtest,imputeTS, dplyr, tseries, BINCOR, ggplot2, dplyr, flextable, webshot2   
+  lmtest, imputeTS, dplyr, tseries, BINCOR, ggplot2, dplyr, flextable, webshot2   
 
 ```
 imputeTS: Moritz, S., & Bartz-Beielstein, T. (2017). imputeTS: Time series missing value imputation in R. The R Journal, 9(1), 207–218. https://doi.org/10.32614/RJ-2017-009   
