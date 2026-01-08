@@ -29,7 +29,7 @@ This method was developed for: ###INSERT THE PAPER HERE NAT !! ####
 
 
 
-![Plotted raw output](https://github.com/NathalieIbsen/PSMC_Away/blob/main/Images/Interpolation_figure.png.png)
+![Plotted raw output](https://github.com/NathalieIbsen/PSMC_Away/blob/main/Images/contextFigure.png)
 
 
 ## Prerequisites
