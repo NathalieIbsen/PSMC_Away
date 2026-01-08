@@ -27,6 +27,11 @@ This method was developed for: ###INSERT THE PAPER HERE NAT !! ####
 
     REF 2: O'Connell D, Kaiser-Bunbury C, Aizpurua O, Bechsgaard J, Borregaard M, Alberdi A, Galetti M, Gilbert MT, Gonçalves F, Heinen J, Jønsson K, Ramos-Madrigal J, Moyle L, Pedersen M, Schroeder H, Simmons B, Temeles EJ, Thomsen P, de Vere N, Morales H, Vollstädt M, Bilde T and Dalsgaard B (preprint). Islands as laboratories of mutualistic interactions: integrating molecular approaches to advance to an eco-evolutionary understanding of mutualism. Authorea.
 
+
+
+![Plotted raw output] (https://github.com/NathalieIbsen/PSMC_Away/blob/main/Images/Interpolation_figure.png.png)
+
+
 ## Prerequisites
 
 ### PSMC 
